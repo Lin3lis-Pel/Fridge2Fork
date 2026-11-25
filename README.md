@@ -13,18 +13,7 @@ your time and mental energy so you can get straight to the pan.
 
 **Challenge:** [DEV Weekend Challenge: Passion Edition](https://dev.to/challenges/weekend-2026-07-09)
 
-[![Launch the live demo](https://img.shields.io/badge/Launch_Live_Demo-Google_Cloud_Run-0F9D58?style=for-the-badge&logo=googlecloud&logoColor=white)](https://fridgeagent-30975867572.europe-north1.run.app)
-
 ![FridgeAgent welcome screen](screenshots/01_welcome.png)
-
-## Live Demo
-
-**Try it now:** [https://fridgeagent-30975867572.europe-north1.run.app](https://fridgeagent-30975867572.europe-north1.run.app)
-
-The public demo runs on Google Cloud Run and calls Vertex AI through a scoped
-service account—there is no API key in the repository, container, or browser.
-It uses `gemini-2.5-flash`, is capped at two instances, and scales to zero when
-idle.
 
 ## Run It (One Command)
 
@@ -288,7 +277,8 @@ streamlit run main.py
 
 ## Deploy on Google Cloud Run
 
-**Current deployment:** [open FridgeAgent](https://fridgeagent-30975867572.europe-north1.run.app) · project `fridge2fork-502221` · region `europe-north1` · model `gemini-2.5-flash`
+There is no public deployment at the moment. Run it locally, or deploy your own
+copy with the steps below.
 
 The repository includes a production `Dockerfile` and explicit Cloud Run
 ignore rules. The recommended deployment uses the Cloud Run service identity
@@ -346,7 +336,7 @@ Vertex AI spend. If the app should be private, remove
 ## Tests
 
 ```powershell
-pytest
+python -m pytest
 ```
 
 54 tests: agent workflow in mock mode, RAG retrieval correctness and latency

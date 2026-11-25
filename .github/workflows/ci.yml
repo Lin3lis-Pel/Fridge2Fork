@@ -23,7 +23,7 @@ jobs:
         env:
           APP_MODE: mock
           TELEMETRY_DIR: ${{ runner.temp }}/telemetry
-        run: pytest -q
+        run: python -m pytest -q
 
       - name: LLM ops report with performance budgets
         env:
